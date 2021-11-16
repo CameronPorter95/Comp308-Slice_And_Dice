@@ -23,8 +23,8 @@
 #include "cut.hpp"
 #include <map>
 #include <random>
-#include <windows.h>
-#include <mmsystem.h>
+// #include <windows.h>
+// #include <mmsystem.h>
 #pragma comment(lib, "winmm.lib")
 using namespace std;
 using namespace comp308;
@@ -473,7 +473,7 @@ void mouseCallback(int button, int state, int x, int y) {
 				//preserve momentum
 				//clear rigid body list
 				//add all the new rigidbodies post cut
-				PlaySound("../work/res/sounds/kama1.wav", NULL, SND_FILENAME | SND_ASYNC);
+				// PlaySound("../work/res/sounds/kama1.wav", NULL, SND_FILENAME | SND_ASYNC);
 			}
 			break;
 
@@ -537,14 +537,14 @@ int main(int argc, char **argv) {
 
 	// Initilise GLEW
 	// must be done after creating GL context (glutCreateWindow in this case)
-	GLenum err = glewInit();
-	if (GLEW_OK != err) { // Problem: glewInit failed, something is seriously wrong.
-		cerr << "Error: " << glewGetErrorString(err) << endl;
-		abort(); // Unrecoverable error
-	}
+	// GLenum err = glewInit();
+	// if (GLEW_OK != err) { // Problem: glewInit failed, something is seriously wrong.
+		// cerr << "Error: " << glewGetErrorString(err) << endl;
+		// abort(); // Unrecoverable error
+	// }
 
 	cout << "Using OpenGL " << glGetString(GL_VERSION) << endl;
-	cout << "Using GLEW " << glewGetString(GLEW_VERSION) << endl;
+	// cout << "Using GLEW " << glewGetString(GLEW_VERSION) << endl;
 
 	//Create our physics and geometry
 	physics = new Physics();
